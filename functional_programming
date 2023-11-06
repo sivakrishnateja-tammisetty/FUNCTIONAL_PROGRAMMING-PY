@@ -1,0 +1,38 @@
+*FUNCTIONAL PROGRAMMING:
+  * Functional programming means  writing programs in different way.
+  *Functional programming should be ble to assign  functions to variables.
+
+
+
+Eg1:                                                                       
+
+def add(i,j):
+    return i+j
+a=add
+res=a(2,3)
+print(res)
+ o/p:5
+
+Eg2:
+def add(i,j):
+    return i+j
+def call_add(i,j):
+    return add(i,j)
+res=call_add(2,3)
+print(res)
+o/p:5
+
+
+
+
+Eg:
+def add(i,j):
+    return i+j
+def call(i,j):
+    return add(i,j)
+def pas(i,j,fun):
+    return fun(i,j)
+res=pas(2,3,call)
+print(res)
+
+o/p:5
