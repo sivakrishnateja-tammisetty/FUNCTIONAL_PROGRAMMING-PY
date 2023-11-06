@@ -36,3 +36,109 @@ res=pas(2,3,call)
 print(res)
 
 o/p:5
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*LAMBDA FUNCTION:
+---------------
+ *Lambda function is a nameless function(anonymus function).
+ *syntax:
+         lambda arguments:expression
+
+Eg:
+ fun=lambda a:a+2
+ res=fun(2)
+ print(res) 
+o/p:4
+
+Eg:
+fun=lambda a,b:a+b
+res=fun(2,4)
+print(res)
+o/p:6
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*FILTER:
+ ------
+
+*syntax: filter(function,iterable)
+
+
+Eg:
+ def find_even(a):
+    return a%2==0
+numbers=[1,2,3,4,5,6,7,8,9]
+res_obj=filter(find_even,numbers)
+print(res_obj)
+res=list(filter(find_even,numbers))
+print(res)
+
+
+o/p:
+<filter object at 0X7fa9f4f900d0>
+[2,4,6,8]
+
+
+
+
+def find_even(a):
+    return a%2==0
+numbers=[1,2,3,4,5,6,7,8,9]
+res_obj=filter(find_even,numbers)
+print(res_obj)
+res=set(filter(find_even,numbers))
+print(res)
+
+
+o/p:
+<filter object at 0X7fa9f4f900d0>
+{2,4,6,8}
+
+
+
+*combination of lambda and filter function
+ Eg:
+ numbers=[1,2,3,4,5,6,7,8,9]
+res=set(filter(lambda a:a%2==0,numbers))
+print(res)
+o/p:{8,2,4,6}
+
+
+
+
+
+*instead of list,we given range()
+
+Eg:
+res=set(filter(lambda a:a%2==0, range(11)))
+print(res)
+
+o/p:
+{0,2,4,6,8,10}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*MAP:
+ ---
+
+*Map is a same as filter ,but functionality should be different.
+*syntax ==> map(function,iterable)
+
+Eg:
+def squares(a):
+    return a*a
+numbers=[1,2,3,4]
+res=list(map(squares,numbers))
+print(res)
+
+o/p:
+[1,4,9,16]
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*ITERATOR AND GENERATOR:
+ ----------------------
+
