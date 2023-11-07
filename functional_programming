@@ -142,3 +142,64 @@ o/p:
 *ITERATOR AND GENERATOR:
  ----------------------
 
+ *ITERATOR :Iterator is an object that contains a countable number of values.
+
+*syntax : iter(iterable)
+*Iterator contains 2methods:  __iter__() and __next__()
+Eg:
+names=["siva","krishna","Teja"]
+iteration=iter(names)
+print(iteration)         #It prints iteration object
+print(iteration.__next__()) #It prints first value
+print(next(iteration))      #Its print next value(Another way)
+
+o/p:
+<list_iterator object at 0x7f00fc7f7100>
+siva
+krishna
+
+*GENERATOR : It is something that creates iterator.
+ *whenever we want generator, we need to define function.
+ *yield :These yield gives the generator.
+ *generator gives iterables.
+
+ *DIFFERENCE B/W RETURN AND YIELD?
+  *After return statement,other statements will not consider and execute,whereas in yield we can give any number of yield statements.
+
+Eg:
+
+def fun():
+    yield 1
+    yield 2
+    yield 3
+values=fun()
+print(values)
+print(values.__next__())
+print(values.__next__())
+print(values.__next__())
+
+o/p:
+<generator object fun at 0x7f716cfd82e0>
+1
+2
+3
+
+
+
+Eg2:
+def squares():
+    n=1
+    while n<=5:
+        square=n**2
+        yield square
+        n=n+1
+values=squares()
+for i in values:
+    print(i)
+
+o/p:
+1
+4
+9
+16
+25
